@@ -12,10 +12,13 @@ League Stitch keeps things simple!
 
 ## Tech Stack
 
-**Client:** 
+**Client:** [![JavaScript](http://3con14.biz/code/_data/js/intro/js-logo.png)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![HTML5 and CSS3](https://github.com/FransLopez/logo-images/blob/master/logos/html5andcss3.png)](http://www.w3.org/) 
+
 [HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 **Server:** [NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) !
+[![ExpressJS](https://github.com/MarioTerron/logo-images/blob/master/logos/expressjs.png)](http://expressjs.com///)
 
 
 ## API Reference
