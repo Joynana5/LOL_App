@@ -1,0 +1,4 @@
+.nfs*
+#general ignore
+node_modules
+package-lock.json

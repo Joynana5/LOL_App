@@ -1,0 +1,3709 @@
+[{
+  "Caitlyn": {
+    "id": "Caitlyn",
+    "key": "51",
+    "name": "Caitlyn",
+    "title": "the Sheriff of Piltover",
+    "image": {
+      "full": "Caitlyn.png",
+      "sprite": "champion0.png",
+      "group": "champion",
+      "x": 336,
+      "y": 48,
+      "w": 48,
+      "h": 48
+    },
+    "lore": "Renowned as its finest peacekeeper, Caitlyn is also Piltover's best shot at ridding the city of its elusive criminal elements. She is often paired with Vi, acting as a cool counterpoint to her partner's more impetuous nature. Even though she carries a one-of-a-kind hextech rifle, Caitlyn's most powerful weapon is her superior intellect, allowing her to lay elaborate traps for any lawbreakers foolish enough to operate in the City of Progress.",
+    "blurb": "Renowned as its finest peacekeeper, Caitlyn is also Piltover's best shot at ridding the city of its elusive criminal elements. She is often paired with Vi, acting as a cool counterpoint to her partner's more impetuous nature. Even though she carries a...",
+    "allytips": [
+      "Make use of her Yordle Snap Traps by placing them pre-emptively to ensure that you'll have one off of cooldown during combat.",
+      "Avoid using Ace in the Hole in large team melees as it might be blocked by the wrong target.",
+      "Fire 90 Caliber Net away from the opponent to close the gap or hop over walls."
+    ],
+    "enemytips": [
+      "Keep behind allied minions if Caitlyn is harassing you with Piltover Peacemaker (it deals less damage with each subsequent target).",
+      "You can intercept Ace in the Hole's missile from hitting an ally if you stand in its path."
+    ],
+    "tags": [
+      "Marksman"
+    ],
+    "partype": "Mana",
+    "info": {
+      "attack": 8,
+      "defense": 2,
+      "magic": 2,
+      "difficulty": 6
+    },
+    "stats": {
+      "hp": 580,
+      "hpperlevel": 107,
+      "mp": 315,
+      "mpperlevel": 40,
+      "movespeed": 325,
+      "armor": 28,
+      "armorperlevel": 4.7,
+      "spellblock": 30,
+      "spellblockperlevel": 1.3,
+      "attackrange": 650,
+      "hpregen": 3.5,
+      "hpregenperlevel": 0.55,
+      "mpregen": 7.4,
+      "mpregenperlevel": 0.7,
+      "crit": 0,
+      "critperlevel": 0,
+      "attackdamage": 62,
+      "attackdamageperlevel": 3.8,
+      "attackspeedperlevel": 4,
+      "attackspeed": 0.681
+    },
+    "spells": [
+      {
+        "id": "CaitlynQ",
+        "name": "Piltover Peacemaker",
+        "description": "Caitlyn revs up her rifle for 1 second to unleash a penetrating shot that deals physical damage (deals less damage to subsequent targets).",
+        "tooltip": "Caitlyn revs her rifle to fire a piercing shot dealing <physicalDamage>{{ initialdamage }} physical damage</physicalDamage>. After the bolt strikes the first target, it opens into a wider shot that deals <physicalDamage>{{ secondarydamage }} physical damage</physicalDamage>.<br /><br />Enemies revealed by <spellName>Yordle Snap Trap</spellName> always take full damage.{{ spellmodifierdescriptionappend }}",
+        "leveltip": {
+          "label": [
+            "Damage",
+            "Total AD Ratio",
+            "Cooldown",
+            "@AbilityResourceName@ Cost"
+          ],
+          "effect": [
+            "{{ basedamage }} -> {{ basedamageNL }}",
+            "{{ tadratio*100.000000 }}% -> {{ tadrationl*100.000000 }}%",
+            "{{ cooldown }} -> {{ cooldownNL }}",
+            "{{ cost }} -> {{ costNL }}"
+          ]
+        },
+        "maxrank": 5,
+        "cooldown": [
+          10,
+          9,
+          8,
+          7,
+          6
+        ],
+        "cooldownBurn": "10/9/8/7/6",
+        "cost": [
+          55,
+          60,
+          65,
+          70,
+          75
+        ],
+        "costBurn": "55/60/65/70/75",
+        "datavalues": {},
+        "effect": [
+          null,
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            50,
+            50,
+            50,
+            50,
+            50
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1.3,
+            1.45,
+            1.6,
+            1.75,
+            1.9
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "effectBurn": [
+          null,
+          "0",
+          "0",
+          "50",
+          "1",
+          "1.3/1.45/1.6/1.75/1.9",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "vars": [],
+        "costType": " {{ abilityresourcename }}",
+        "maxammo": "-1",
+        "range": [
+          1250,
+          1250,
+          1250,
+          1250,
+          1250
+        ],
+        "rangeBurn": "1250",
+        "image": {
+          "full": "CaitlynQ.png",
+          "sprite": "spell2.png",
+          "group": "spell",
+          "x": 192,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "resource": "{{ cost }} {{ abilityresourcename }}"
+      },
+      {
+        "id": "CaitlynW",
+        "name": "Yordle Snap Trap",
+        "description": "Caitlyn sets a trap that, when sprung, reveals and immobilizes the enemy champion for 1.5 seconds, granting Caitlyn an empowered Headshot.",
+        "tooltip": "Caitlyn sets a trap that <status>Roots</status> the first champion that steps on it for {{ e6 }} seconds and granting <keywordStealth>True Sight</keywordStealth> of them for 3 seconds. Traps last for {{ e3 }} seconds, and {{ e5 }} traps may be active at once. This Ability has {{ e5 }} charges ({{ ammorechargetime }} second refresh).{{ spellmodifierdescriptionappend }}",
+        "leveltip": {
+          "label": [
+            "Bonus Headshot Damage on Trapped Targets",
+            "Bonus Attack Damage Ratio",
+            "Recharge Time",
+            "Maximum Traps",
+            "Trap Duration"
+          ],
+          "effect": [
+            "{{ e2 }} -> {{ e2NL }}",
+            "{{ e7 }}% -> {{ e7NL }}%",
+            "{{ ammorechargetime }} -> {{ ammorechargetimeNL }}",
+            "{{ e4 }} -> {{ e4NL }}",
+            "{{ e3 }} -> {{ e3NL }}"
+          ]
+        },
+        "maxrank": 5,
+        "cooldown": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "cooldownBurn": "0.5",
+        "cost": [
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "costBurn": "20",
+        "datavalues": {},
+        "effect": [
+          null,
+          [
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          [
+            40,
+            85,
+            130,
+            175,
+            220
+          ],
+          [
+            30,
+            35,
+            40,
+            45,
+            50
+          ],
+          [
+            3,
+            3,
+            4,
+            4,
+            5
+          ],
+          [
+            3,
+            3,
+            4,
+            4,
+            5
+          ],
+          [
+            1.5,
+            1.5,
+            1.5,
+            1.5,
+            1.5
+          ],
+          [
+            40,
+            50,
+            60,
+            70,
+            80
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "effectBurn": [
+          null,
+          "2",
+          "40/85/130/175/220",
+          "30/35/40/45/50",
+          "3/3/4/4/5",
+          "3/3/4/4/5",
+          "1.5",
+          "40/50/60/70/80",
+          "0",
+          "0",
+          "0"
+        ],
+        "vars": [],
+        "costType": " {{ abilityresourcename }}",
+        "maxammo": "2",
+        "range": [
+          800,
+          800,
+          800,
+          800,
+          800
+        ],
+        "rangeBurn": "800",
+        "image": {
+          "full": "CaitlynW.png",
+          "sprite": "spell2.png",
+          "group": "spell",
+          "x": 240,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "resource": "{{ cost }} {{ abilityresourcename }}"
+      },
+      {
+        "id": "CaitlynE",
+        "name": "90 Caliber Net",
+        "description": "Caitlyn fires a heavy net to slow her target. The recoil knocks Caitlyn back.",
+        "tooltip": "Caitlyn fires a net, pushing her backwards. The net <status>Slows</status> the first target hit by {{ e3 }}% for {{ e2 }} second and deals <magicDamage>{{ netdamage }} magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
+        "leveltip": {
+          "label": [
+            "Damage",
+            "Cooldown"
+          ],
+          "effect": [
+            "{{ e1 }} -> {{ e1NL }}",
+            "{{ cooldown }} -> {{ cooldownNL }}"
+          ]
+        },
+        "maxrank": 5,
+        "cooldown": [
+          16,
+          14,
+          12,
+          10,
+          8
+        ],
+        "cooldownBurn": "16/14/12/10/8",
+        "cost": [
+          75,
+          75,
+          75,
+          75,
+          75
+        ],
+        "costBurn": "75",
+        "datavalues": {},
+        "effect": [
+          null,
+          [
+            80,
+            130,
+            180,
+            230,
+            280
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            50,
+            50,
+            50,
+            50,
+            50
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "effectBurn": [
+          null,
+          "80/130/180/230/280",
+          "1",
+          "50",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "vars": [],
+        "costType": " {{ abilityresourcename }}",
+        "maxammo": "-1",
+        "range": [
+          750,
+          750,
+          750,
+          750,
+          750
+        ],
+        "rangeBurn": "750",
+        "image": {
+          "full": "CaitlynE.png",
+          "sprite": "spell2.png",
+          "group": "spell",
+          "x": 288,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "resource": "{{ cost }} {{ abilityresourcename }}"
+      },
+      {
+        "id": "CaitlynR",
+        "name": "Ace in the Hole",
+        "description": "Caitlyn takes time to line up the perfect shot, dealing massive damage to a single target at a huge range. Enemy champions can intercept the bullet for their ally.",
+        "tooltip": "Caitlyn takes a moment to channel and line up the perfect shot, then she fires, dealing <physicalDamage>{{ rtotaldamage }} physical damage</physicalDamage>, but other enemy champions can intercept it. This Ability grants <keywordStealth>True Sight</keywordStealth> of the target during the channel.<br /><br /><rules>Deals up to an additional {{ critchanceamp*100 }}% based on Caitlyn's Critical Strike chance.</rules>{{ spellmodifierdescriptionappend }}",
+        "leveltip": {
+          "label": [
+            "Damage",
+            "Cooldown"
+          ],
+          "effect": [
+            "{{ rbasedamage }} -> {{ rbasedamageNL }}",
+            "{{ cooldown }} -> {{ cooldownNL }}"
+          ]
+        },
+        "maxrank": 3,
+        "cooldown": [
+          90,
+          75,
+          60
+        ],
+        "cooldownBurn": "90/75/60",
+        "cost": [
+          100,
+          100,
+          100
+        ],
+        "costBurn": "100",
+        "datavalues": {},
+        "effect": [
+          null,
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "effectBurn": [
+          null,
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "vars": [],
+        "costType": " {{ abilityresourcename }}",
+        "maxammo": "-1",
+        "range": [
+          3500,
+          3500,
+          3500
+        ],
+        "rangeBurn": "3500",
+        "image": {
+          "full": "CaitlynR.png",
+          "sprite": "spell2.png",
+          "group": "spell",
+          "x": 336,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "resource": "{{ cost }} {{ abilityresourcename }}"
+      }
+    ],
+    "passive": {
+      "name": "Headshot",
+      "description": "Every few basic attacks, or against a target she has trapped or netted, Caitlyn will fire a headshot dealing bonus damage that scales with her critical strike chance. On trapped or netted targets, Caitlyn's Headshot attack range is doubled.",
+      "image": {
+        "full": "Caitlyn_Headshot.png",
+        "sprite": "passive0.png",
+        "group": "passive",
+        "x": 336,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      }
+    },
+    "recommended": []
+  },
+  "Garen": {
+    "id": "Garen",
+    "key": "86",
+    "name": "Garen",
+    "title": "The Might of Demacia",
+    "image": {
+      "full": "Garen.png",
+      "sprite": "champion1.png",
+      "group": "champion",
+      "x": 240,
+      "y": 0,
+      "w": 48,
+      "h": 48
+    },
+    "lore": "A proud and noble warrior, Garen fights as one of the Dauntless Vanguard. He is popular among his fellows, and respected well enough by his enemies—not least as a scion of the prestigious Crownguard family, entrusted with defending Demacia and its ideals. Clad in magic-resistant armor and bearing a mighty broadsword, Garen stands ready to confront mages and sorcerers on the field of battle, in a veritable whirlwind of righteous steel.",
+    "blurb": "A proud and noble warrior, Garen fights as one of the Dauntless Vanguard. He is popular among his fellows, and respected well enough by his enemies—not least as a scion of the prestigious Crownguard family, entrusted with defending Demacia and its...",
+    "allytips": [
+      "Garen's regeneration greatly increases if he can avoid receiving damage for several seconds.",
+      "Judgment deals maximum damage when only hitting a single target. For effective trading, try to position such that only the enemy champion is hit.",
+      "Garen is only constrained by cooldowns, making items such as Black Cleaver very effective for him."
+    ],
+    "enemytips": [
+      "Stack armor items to lower the large amount of physical damage that Garen deals out.",
+      "Try to run away from Garen as your health gets lower, as he can execute you quickly with Demacian Justice.",
+      "Be careful about attacking Garen in brush. It often will lead to taking full damage from Judgment.",
+      "Judgment deals maximum damage when only hitting a single target. If getting out of its radius isn't possible, move through allied minions to reduce damage taken."
+    ],
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
+    "partype": "None",
+    "info": {
+      "attack": 7,
+      "defense": 7,
+      "magic": 1,
+      "difficulty": 5
+    },
+    "stats": {
+      "hp": 690,
+      "hpperlevel": 98,
+      "mp": 0,
+      "mpperlevel": 0,
+      "movespeed": 340,
+      "armor": 36,
+      "armorperlevel": 4.2,
+      "spellblock": 32,
+      "spellblockperlevel": 1.55,
+      "attackrange": 175,
+      "hpregen": 8,
+      "hpregenperlevel": 0.5,
+      "mpregen": 0,
+      "mpregenperlevel": 0,
+      "crit": 0,
+      "critperlevel": 0,
+      "attackdamage": 66,
+      "attackdamageperlevel": 4.5,
+      "attackspeedperlevel": 3.65,
+      "attackspeed": 0.625
+    },
+    "spells": [
+      {
+        "id": "GarenQ",
+        "name": "Decisive Strike",
+        "description": "Garen gains a burst of Move Speed, breaking free of all slows affecting him. His next attack strikes a vital area of his foe, dealing bonus damage and silencing them.",
+        "tooltip": "Garen removes all <status>Slowing</status> effects on him and gains <speed>{{ movementspeedamount*100 }}% Move Speed</speed> for {{ movementspeedduration }} second(s).<br /><br />His next Attack <status>Silences</status> for {{ silenceduration }} seconds and does <physicalDamage>{{ totaldamage }} physical damage</physicalDamage>.{{ spellmodifierdescriptionappend }}",
+        "leveltip": {
+          "label": [
+            "Damage",
+            "Move Speed Duration"
+          ],
+          "effect": [
+            "{{ basedamage }} -> {{ basedamageNL }}",
+            "{{ movementspeedduration }} -> {{ movementspeeddurationNL }}"
+          ]
+        },
+        "maxrank": 5,
+        "cooldown": [
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "cooldownBurn": "8",
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "costBurn": "0",
+        "datavalues": {},
+        "effect": [
+          null,
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "effectBurn": [
+          null,
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "vars": [],
+        "costType": "No Cost",
+        "maxammo": "-1",
+        "range": [
+          300,
+          300,
+          300,
+          300,
+          300
+        ],
+        "rangeBurn": "300",
+        "image": {
+          "full": "GarenQ.png",
+          "sprite": "spell3.png",
+          "group": "spell",
+          "x": 288,
+          "y": 144,
+          "w": 48,
+          "h": 48
+        },
+        "resource": "No Cost"
+      },
+      {
+        "id": "GarenW",
+        "name": "Courage",
+        "description": "Garen passively increases his armor and magic resist by killing enemies. He may also activate this ability to give him a shield and tenacity for a brief moment followed by a lesser amount of damage reduction for a longer duration.",
+        "tooltip": "<spellPassive>Passive:</spellPassive> Killing units permanently grants <scaleArmor>{{ resistgainonkill }} Armor</scaleArmor> and <scaleMR>{{ resistgainonkill }} Magic Resist</scaleMR>, up to a max of {{ resistmax }}. At max stacks, Garen gains <scaleArmor>{{ percentarmor }} Armor</scaleArmor> and <scaleMR>{{ percentmr }} Magic Resist</scaleMR>.<br /><br /><spellActive>Active:</spellActive> Garen steels his courage for {{ drduration }} seconds, reducing incoming damage by {{ drpercent*100 }}%. He also gains <shield>{{ totalshield }} Shield</shield> and {{ upfronttenacity*100 }}% Tenacity for {{ upfrontduration }} seconds.{{ spellmodifierdescriptionappend }}",
+        "leveltip": {
+          "label": [
+            "Duration",
+            "Cooldown",
+            "Shield Amount"
+          ],
+          "effect": [
+            "{{ drduration }} -> {{ drdurationNL }}",
+            "{{ cooldown }} -> {{ cooldownNL }}",
+            "{{ shieldbase }} -> {{ shieldbaseNL }}"
+          ]
+        },
+        "maxrank": 5,
+        "cooldown": [
+          23,
+          21,
+          19,
+          17,
+          15
+        ],
+        "cooldownBurn": "23/21/19/17/15",
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "costBurn": "0",
+        "datavalues": {},
+        "effect": [
+          null,
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "effectBurn": [
+          null,
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "vars": [],
+        "costType": "No Cost",
+        "maxammo": "-1",
+        "range": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "rangeBurn": "0",
+        "image": {
+          "full": "GarenW.png",
+          "sprite": "spell3.png",
+          "group": "spell",
+          "x": 336,
+          "y": 144,
+          "w": 48,
+          "h": 48
+        },
+        "resource": "No Cost"
+      },
+      {
+        "id": "GarenE",
+        "name": "Judgment",
+        "description": "Garen rapidly spins his sword around his body, dealing physical damage to nearby enemies.",
+        "tooltip": "Garen rapidly spins his sword for {{ duration }} seconds, dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> {{ f1 }} times over the duration. The nearest enemy takes <physicalDamage>{{ totaldamagenearest }} physical damage</physicalDamage> per strike instead.<br /><br />Champions hit by {{ stackstoshred }} strikes lose <scaleArmor>{{ shredamount*100 }}% Armor</scaleArmor> for {{ shredduration }} seconds.{{ spellmodifierdescriptionappend }}",
+        "leveltip": {
+          "label": [
+            "Damage Per Spin",
+            "Attack Damage Scaling Per Spin"
+          ],
+          "effect": [
+            "{{ basedamagepertick }} -> {{ basedamagepertickNL }}",
+            "{{ adratiopertick*100.000000 }}% -> {{ adratioperticknl*100.000000 }}%"
+          ]
+        },
+        "maxrank": 5,
+        "cooldown": [
+          9,
+          9,
+          9,
+          9,
+          9
+        ],
+        "cooldownBurn": "9",
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "costBurn": "0",
+        "datavalues": {},
+        "effect": [
+          null,
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "effectBurn": [
+          null,
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "vars": [],
+        "costType": "No Cost",
+        "maxammo": "-1",
+        "range": [
+          325,
+          325,
+          325,
+          325,
+          325
+        ],
+        "rangeBurn": "325",
+        "image": {
+          "full": "GarenE.png",
+          "sprite": "spell3.png",
+          "group": "spell",
+          "x": 384,
+          "y": 144,
+          "w": 48,
+          "h": 48
+        },
+        "resource": "No Cost"
+      },
+      {
+        "id": "GarenR",
+        "name": "Demacian Justice",
+        "description": "Garen calls upon the might of Demacia to attempt to execute an enemy champion.",
+        "tooltip": "Garen calls upon the might of Demacia to slay his enemy, dealing <trueDamage>{{ basedamage }} plus {{ executedamage*100 }}% missing Health true damage</trueDamage>.{{ spellmodifierdescriptionappend }}",
+        "leveltip": {
+          "label": [
+            "Cooldown",
+            "Damage",
+            "Percent Missing Health Damage"
+          ],
+          "effect": [
+            "{{ cooldown }} -> {{ cooldownNL }}",
+            "{{ basedamage }} -> {{ basedamageNL }}",
+            "{{ executedamage*100.000000 }}% -> {{ executedamagenl*100.000000 }}%"
+          ]
+        },
+        "maxrank": 3,
+        "cooldown": [
+          120,
+          100,
+          80
+        ],
+        "cooldownBurn": "120/100/80",
+        "cost": [
+          0,
+          0,
+          0
+        ],
+        "costBurn": "0",
+        "datavalues": {},
+        "effect": [
+          null,
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "effectBurn": [
+          null,
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "vars": [],
+        "costType": "No Cost",
+        "maxammo": "-1",
+        "range": [
+          400,
+          400,
+          400
+        ],
+        "rangeBurn": "400",
+        "image": {
+          "full": "GarenR.png",
+          "sprite": "spell3.png",
+          "group": "spell",
+          "x": 432,
+          "y": 144,
+          "w": 48,
+          "h": 48
+        },
+        "resource": "No Cost"
+      }
+    ],
+    "passive": {
+      "name": "Perseverance",
+      "description": "If Garen has not recently been struck by damage or enemy abilities, he regenerates a percentage of his total health each second.",
+      "image": {
+        "full": "Garen_Passive.png",
+        "sprite": "passive1.png",
+        "group": "passive",
+        "x": 240,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      }
+    },
+    "recommended": []
+  },
+  "Leona": {
+    "id": "Leona",
+    "key": "89",
+    "name": "Leona",
+    "title": "the Radiant Dawn",
+    "image": {
+      "full": "Leona.png",
+      "sprite": "champion2.png",
+      "group": "champion",
+      "x": 336,
+      "y": 0,
+      "w": 48,
+      "h": 48
+    },
+    "lore": "Imbued with the fire of the sun, Leona is a holy warrior of the Solari who defends Mount Targon with her Zenith Blade and the Shield of Daybreak. Her skin shimmers with starfire while her eyes burn with the power of the celestial Aspect within her. Armored in gold and bearing a terrible burden of ancient knowledge, Leona brings enlightenment to some, death to others.",
+    "blurb": "Imbued with the fire of the sun, Leona is a holy warrior of the Solari who defends Mount Targon with her Zenith Blade and the Shield of Daybreak. Her skin shimmers with starfire while her eyes burn with the power of the celestial Aspect within her...",
+    "allytips": [
+      "Lead the charge and mark your foes with Sunlight before your allies deal damage.",
+      "Shield of Daybreak and Zenith Blade form a powerful offensive combo.",
+      "You can absorb a huge amount of damage using Eclipse, but you must stay near enemies to gain the bonus duration."
+    ],
+    "enemytips": [
+      "When Leona activates Eclipse, you have three seconds to get away from her before she deals damage.",
+      "Only foes in the center of Solar Flare get stunned, so you can often avoid this if you're quick."
+    ],
+    "tags": [
+      "Tank",
+      "Support"
+    ],
+    "partype": "Mana",
+    "info": {
+      "attack": 4,
+      "defense": 8,
+      "magic": 3,
+      "difficulty": 4
+    },
+    "stats": {
+      "hp": 646,
+      "hpperlevel": 101,
+      "mp": 302,
+      "mpperlevel": 40,
+      "movespeed": 335,
+      "armor": 47,
+      "armorperlevel": 4.8,
+      "spellblock": 32,
+      "spellblockperlevel": 2.05,
+      "attackrange": 125,
+      "hpregen": 8.5,
+      "hpregenperlevel": 0.85,
+      "mpregen": 6,
+      "mpregenperlevel": 0.8,
+      "crit": 0,
+      "critperlevel": 0,
+      "attackdamage": 60,
+      "attackdamageperlevel": 3,
+      "attackspeedperlevel": 2.9,
+      "attackspeed": 0.625
+    },
+    "spells": [
+      {
+        "id": "LeonaShieldOfDaybreak",
+        "name": "Shield of Daybreak",
+        "description": "Leona uses her shield to perform her next basic attack, dealing bonus magic damage and stunning the target.",
+        "tooltip": "Leona's next Attack <status>Stuns</status> for {{ e1 }} seconds and deals an additional <magicDamage>{{ totaldamagetooltip }}</magicDamage> magic damage.{{ spellmodifierdescriptionappend }}",
+        "leveltip": {
+          "label": [
+            "Damage",
+            "@AbilityResourceName@ Cost"
+          ],
+          "effect": [
+            "{{ e2 }} -> {{ e2NL }}",
+            "{{ cost }} -> {{ costNL }}"
+          ]
+        },
+        "maxrank": 5,
+        "cooldown": [
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "cooldownBurn": "5",
+        "cost": [
+          35,
+          40,
+          45,
+          50,
+          55
+        ],
+        "costBurn": "35/40/45/50/55",
+        "datavalues": {},
+        "effect": [
+          null,
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            10,
+            35,
+            60,
+            85,
+            110
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "effectBurn": [
+          null,
+          "1",
+          "10/35/60/85/110",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "vars": [],
+        "costType": " {{ abilityresourcename }}",
+        "maxammo": "-1",
+        "range": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "rangeBurn": "100",
+        "image": {
+          "full": "LeonaShieldOfDaybreak.png",
+          "sprite": "spell7.png",
+          "group": "spell",
+          "x": 192,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "resource": "{{ cost }} {{ abilityresourcename }}"
+      },
+      {
+        "id": "LeonaSolarBarrier",
+        "name": "Eclipse",
+        "description": "Leona raises her shield to gain Damage Reduction, Armor, and Magic Resist. When the duration first ends, if there are nearby enemies, she will deal magic damage to them and prolong the duration of the effect.",
+        "tooltip": "Leona raises her shield, reducing incoming damage by {{ flatdamagereduction }} and gaining <scaleArmor>{{ bonusarmortooltip }} Armor</scaleArmor> and <scaleMR>{{ bonusmrtooltip }} Magic Resist</scaleMR> for {{ e3 }} seconds. Afterwards, her shield detonates, dealing <magicDamage>{{ totaldamagetooltip }} magic damage</magicDamage> to nearby enemies. If she hits at least one, she retains the <scaleArmor>Armor</scaleArmor> and <scaleMR>Magic Resist</scaleMR> bonuses for an additional {{ e3 }} seconds.<br />{{ spellmodifierdescriptionappend }}",
+        "leveltip": {
+          "label": [
+            "Damage",
+            "Armor and Magic Resist",
+            "Damage Reduction",
+            "Cooldown"
+          ],
+          "effect": [
+            "{{ e1 }} -> {{ e1NL }}",
+            "{{ e4 }} -> {{ e4NL }}",
+            "{{ flatdamagereduction }} -> {{ flatdamagereductionNL }}",
+            "{{ cooldown }} -> {{ cooldownNL }}"
+          ]
+        },
+        "maxrank": 5,
+        "cooldown": [
+          14,
+          13,
+          12,
+          11,
+          10
+        ],
+        "cooldownBurn": "14/13/12/11/10",
+        "cost": [
+          60,
+          60,
+          60,
+          60,
+          60
+        ],
+        "costBurn": "60",
+        "datavalues": {},
+        "effect": [
+          null,
+          [
+            45,
+            80,
+            115,
+            150,
+            185
+          ],
+          [
+            15,
+            20,
+            25,
+            30,
+            35
+          ],
+          [
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          [
+            15,
+            20,
+            25,
+            30,
+            35
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "effectBurn": [
+          null,
+          "45/80/115/150/185",
+          "15/20/25/30/35",
+          "3",
+          "15/20/25/30/35",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "vars": [],
+        "costType": " {{ abilityresourcename }}",
+        "maxammo": "-1",
+        "range": [
+          450,
+          450,
+          450,
+          450,
+          450
+        ],
+        "rangeBurn": "450",
+        "image": {
+          "full": "LeonaSolarBarrier.png",
+          "sprite": "spell7.png",
+          "group": "spell",
+          "x": 240,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "resource": "{{ cost }} {{ abilityresourcename }}"
+      },
+      {
+        "id": "LeonaZenithBlade",
+        "name": "Zenith Blade",
+        "description": "Leona projects a solar image of her sword, dealing magic damage to all enemies in a line. When the image fades, the last enemy champion struck will be briefly immobilized and Leona will dash to them.",
+        "tooltip": "Leona thrusts with a sword of light, dealing <magicDamage>{{ totaldamagetooltip }} magic damage</magicDamage>. The last champion struck will be <status>Rooted</status> for {{ e2 }} seconds and Leona will dash to them.{{ spellmodifierdescriptionappend }}",
+        "leveltip": {
+          "label": [
+            "Damage",
+            "Cooldown"
+          ],
+          "effect": [
+            "{{ e1 }} -> {{ e1NL }}",
+            "{{ cooldown }} -> {{ cooldownNL }}"
+          ]
+        },
+        "maxrank": 5,
+        "cooldown": [
+          12,
+          10.5,
+          9,
+          7.5,
+          6
+        ],
+        "cooldownBurn": "12/10.5/9/7.5/6",
+        "cost": [
+          60,
+          60,
+          60,
+          60,
+          60
+        ],
+        "costBurn": "60",
+        "datavalues": {},
+        "effect": [
+          null,
+          [
+            50,
+            90,
+            130,
+            170,
+            210
+          ],
+          [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "effectBurn": [
+          null,
+          "50/90/130/170/210",
+          "0.5",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "vars": [],
+        "costType": " {{ abilityresourcename }}",
+        "maxammo": "-1",
+        "range": [
+          875,
+          875,
+          875,
+          875,
+          875
+        ],
+        "rangeBurn": "875",
+        "image": {
+          "full": "LeonaZenithBlade.png",
+          "sprite": "spell7.png",
+          "group": "spell",
+          "x": 288,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "resource": "{{ cost }} {{ abilityresourcename }}"
+      },
+      {
+        "id": "LeonaSolarFlare",
+        "name": "Solar Flare",
+        "description": "Leona calls down a beam of solar energy, dealing damage to enemies in an area. Enemies in the center of the area are stunned, while enemies on the outside are slowed.",
+        "tooltip": "Leona calls down a radiant beam of solar energy dealing <magicDamage>{{ explosioncalculateddamage }} magic damage</magicDamage> and <status>Slowing</status> by {{ slowpercent }}% for {{ ccduration }} seconds. Enemies in the center of the flare are <status>Stunned</status> instead of <status>Slowed</status>.{{ spellmodifierdescriptionappend }}",
+        "leveltip": {
+          "label": [
+            "Damage",
+            "Cooldown"
+          ],
+          "effect": [
+            "{{ explosionbasedamage }} -> {{ explosionbasedamageNL }}",
+            "{{ cooldown }} -> {{ cooldownNL }}"
+          ]
+        },
+        "maxrank": 3,
+        "cooldown": [
+          90,
+          75,
+          60
+        ],
+        "cooldownBurn": "90/75/60",
+        "cost": [
+          100,
+          100,
+          100
+        ],
+        "costBurn": "100",
+        "datavalues": {},
+        "effect": [
+          null,
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            100,
+            100,
+            100
+          ],
+          [
+            3,
+            3,
+            3
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "effectBurn": [
+          null,
+          "0",
+          "0",
+          "0",
+          "100",
+          "3",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "vars": [],
+        "costType": " {{ abilityresourcename }}",
+        "maxammo": "-1",
+        "range": [
+          1200,
+          1200,
+          1200
+        ],
+        "rangeBurn": "1200",
+        "image": {
+          "full": "LeonaSolarFlare.png",
+          "sprite": "spell7.png",
+          "group": "spell",
+          "x": 336,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "resource": "{{ cost }} {{ abilityresourcename }}"
+      }
+    ],
+    "passive": {
+      "name": "Sunlight",
+      "description": "Damaging spells afflict enemies with Sunlight for 1.5 seconds. When allied Champions deal damage to those targets, they consume the Sunlight to deal additional magic damage.",
+      "image": {
+        "full": "LeonaSunlight.png",
+        "sprite": "passive2.png",
+        "group": "passive",
+        "x": 336,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      }
+    },
+    "recommended": []
+  },
+  "Lux": {
+    "id": "Lux",
+    "key": "99",
+    "name": "Lux",
+    "title": "the Lady of Luminosity",
+    "image": {
+      "full": "Lux.png",
+      "sprite": "champion2.png",
+      "group": "champion",
+      "x": 96,
+      "y": 48,
+      "w": 48,
+      "h": 48
+    },
+    "lore": "Luxanna Crownguard hails from Demacia, an insular realm where magical abilities are viewed with fear and suspicion. Able to bend light to her will, she grew up dreading discovery and exile, and was forced to keep her power secret, in order to preserve her family's noble status. Nonetheless, Lux's optimism and resilience have led her to embrace her unique talents, and she now covertly wields them in service of her homeland.",
+    "blurb": "Luxanna Crownguard hails from Demacia, an insular realm where magical abilities are viewed with fear and suspicion. Able to bend light to her will, she grew up dreading discovery and exile, and was forced to keep her power secret, in order to preserve...",
+    "allytips": [
+      "Lux has great zone control abilities. Try to set up Lucent Singularity to prevent an enemy's advance or escape.",
+      "If you have trouble landing Prismatic Barrier, remember that it returns to you after it reaches max range. Try positioning yourself to hit your allies with its return trip.",
+      "Lucent Singularity is a great scouting tool. Try throwing it into brush before walking into it to check for ambushes."
+    ],
+    "enemytips": [
+      "Lux has powerful zone control abilities. Try to spread out and attack from different directions so she cannot lock down a specific area.",
+      "When retreating with low health, be prepared to dodge Lux's Final Spark, a red targeting beam fires prior to the main beam, so try to move to the side if possible."
+    ],
+    "tags": [
+      "Mage",
+      "Support"
+    ],
+    "partype": "Mana",
+    "info": {
+      "attack": 2,
+      "defense": 4,
+      "magic": 9,
+      "difficulty": 5
+    },
+    "stats": {
+      "hp": 560,
+      "hpperlevel": 99,
+      "mp": 480,
+      "mpperlevel": 23.5,
+      "movespeed": 330,
+      "armor": 19,
+      "armorperlevel": 5.2,
+      "spellblock": 30,
+      "spellblockperlevel": 1.3,
+      "attackrange": 550,
+      "hpregen": 5.5,
+      "hpregenperlevel": 0.55,
+      "mpregen": 8,
+      "mpregenperlevel": 0.8,
+      "crit": 0,
+      "critperlevel": 0,
+      "attackdamage": 54,
+      "attackdamageperlevel": 3.3,
+      "attackspeedperlevel": 2,
+      "attackspeed": 0.669
+    },
+    "spells": [
+      {
+        "id": "LuxLightBinding",
+        "name": "Light Binding",
+        "description": "Lux releases a sphere of light that binds and deals damage to up to two enemy units.",
+        "tooltip": "Lux fires a ball of light, <status>Rooting</status> the first two enemies for {{ e3 }} seconds and dealing <magicDamage>{{ totaldamagett }} magic damage</magicDamage> to each.{{ spellmodifierdescriptionappend }}",
+        "leveltip": {
+          "label": [
+            "Damage"
+          ],
+          "effect": [
+            "{{ e1 }} -> {{ e1NL }}"
+          ]
+        },
+        "maxrank": 5,
+        "cooldown": [
+          11,
+          11,
+          11,
+          11,
+          11
+        ],
+        "cooldownBurn": "11",
+        "cost": [
+          50,
+          50,
+          50,
+          50,
+          50
+        ],
+        "costBurn": "50",
+        "datavalues": {},
+        "effect": [
+          null,
+          [
+            80,
+            120,
+            160,
+            200,
+            240
+          ],
+          [
+            50,
+            50,
+            50,
+            50,
+            50
+          ],
+          [
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "effectBurn": [
+          null,
+          "80/120/160/200/240",
+          "50",
+          "2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "vars": [],
+        "costType": " {{ abilityresourcename }}",
+        "maxammo": "-1",
+        "range": [
+          1175,
+          1175,
+          1175,
+          1175,
+          1175
+        ],
+        "rangeBurn": "1175",
+        "image": {
+          "full": "LuxLightBinding.png",
+          "sprite": "spell7.png",
+          "group": "spell",
+          "x": 192,
+          "y": 96,
+          "w": 48,
+          "h": 48
+        },
+        "resource": "{{ cost }} {{ abilityresourcename }}"
+      },
+      {
+        "id": "LuxPrismaticWave",
+        "name": "Prismatic Barrier",
+        "description": "Lux throws her wand and bends the light around any friendly target it touches, protecting them from enemy damage.",
+        "tooltip": "Lux throws her wand, granting <shield>{{ totalshieldtt }} Shield</shield> for {{ e3 }} seconds to allies it passes through. Then it returns, granting the same <shield>Shield</shield> on its return.{{ spellmodifierdescriptionappend }}",
+        "leveltip": {
+          "label": [
+            "Shield Amount",
+            "Cooldown",
+            "@AbilityResourceName@ Cost"
+          ],
+          "effect": [
+            "{{ e2 }} -> {{ e2NL }}",
+            "{{ cooldown }} -> {{ cooldownNL }}",
+            "{{ cost }} -> {{ costNL }}"
+          ]
+        },
+        "maxrank": 5,
+        "cooldown": [
+          14,
+          13,
+          12,
+          11,
+          10
+        ],
+        "cooldownBurn": "14/13/12/11/10",
+        "cost": [
+          60,
+          65,
+          70,
+          75,
+          80
+        ],
+        "costBurn": "60/65/70/75/80",
+        "datavalues": {},
+        "effect": [
+          null,
+          [
+            2,
+            4,
+            6,
+            8,
+            10
+          ],
+          [
+            40,
+            55,
+            70,
+            85,
+            100
+          ],
+          [
+            2.5,
+            2.5,
+            2.5,
+            2.5,
+            2.5
+          ],
+          [
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "effectBurn": [
+          null,
+          "2/4/6/8/10",
+          "40/55/70/85/100",
+          "2.5",
+          "100",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "vars": [],
+        "costType": " {{ abilityresourcename }}",
+        "maxammo": "-1",
+        "range": [
+          1150,
+          1150,
+          1150,
+          1150,
+          1150
+        ],
+        "rangeBurn": "1150",
+        "image": {
+          "full": "LuxPrismaticWave.png",
+          "sprite": "spell7.png",
+          "group": "spell",
+          "x": 240,
+          "y": 96,
+          "w": 48,
+          "h": 48
+        },
+        "resource": "{{ cost }} {{ abilityresourcename }}"
+      },
+      {
+        "id": "LuxLightStrikeKugel",
+        "name": "Lucent Singularity",
+        "description": "Fires an anomaly of twisted light to an area, which slows nearby enemies. Lux can detonate it to damage enemies in the area of effect.",
+        "tooltip": "Lux creates a light zone that <status>Slows</status> by {{ e1 }}% and reveals the area. After {{ e3 }} seconds or on <recast>Recasting</recast> this Ability, it detonates, dealing <magicDamage>{{ totaldamagett }} magic damage</magicDamage> and <status>Slowing</status> for an additional {{ slowlingerduration }} second.{{ spellmodifierdescriptionappend }}",
+        "leveltip": {
+          "label": [
+            "Damage",
+            "Movement Slow",
+            "@AbilityResourceName@ Cost",
+            "Cooldown"
+          ],
+          "effect": [
+            "{{ e2 }} -> {{ e2NL }}",
+            "{{ e1 }} -> {{ e1NL }}",
+            "{{ cost }} -> {{ costNL }}",
+            "{{ cooldown }} -> {{ cooldownNL }}"
+          ]
+        },
+        "maxrank": 5,
+        "cooldown": [
+          10,
+          9.5,
+          9,
+          8.5,
+          8
+        ],
+        "cooldownBurn": "10/9.5/9/8.5/8",
+        "cost": [
+          70,
+          80,
+          90,
+          100,
+          110
+        ],
+        "costBurn": "70/80/90/100/110",
+        "datavalues": {},
+        "effect": [
+          null,
+          [
+            25,
+            30,
+            35,
+            40,
+            45
+          ],
+          [
+            70,
+            120,
+            170,
+            220,
+            270
+          ],
+          [
+            5,
+            5,
+            5,
+            5,
+            5
+          ],
+          [
+            310,
+            310,
+            310,
+            310,
+            310
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "effectBurn": [
+          null,
+          "25/30/35/40/45",
+          "70/120/170/220/270",
+          "5",
+          "310",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "vars": [],
+        "costType": " {{ abilityresourcename }}",
+        "maxammo": "-1",
+        "range": [
+          1100,
+          1100,
+          1100,
+          1100,
+          1100
+        ],
+        "rangeBurn": "1100",
+        "image": {
+          "full": "LuxLightStrikeKugel.png",
+          "sprite": "spell7.png",
+          "group": "spell",
+          "x": 288,
+          "y": 96,
+          "w": 48,
+          "h": 48
+        },
+        "resource": "{{ cost }} {{ abilityresourcename }}"
+      },
+      {
+        "id": "LuxR",
+        "name": "Final Spark",
+        "description": "After gathering energy, Lux fires a beam of light that deals damage to all targets in the area. In addition, triggers Lux's passive ability and refreshes the Illumination debuff duration.",
+        "tooltip": "Lux fires a dazzling ray of light, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> to all enemies in a line.{{ spellmodifierdescriptionappend }}",
+        "leveltip": {
+          "label": [
+            "Damage",
+            "Cooldown"
+          ],
+          "effect": [
+            "{{ damage }} -> {{ damageNL }}",
+            "{{ cooldown }} -> {{ cooldownNL }}"
+          ]
+        },
+        "maxrank": 3,
+        "cooldown": [
+          60,
+          50,
+          40
+        ],
+        "cooldownBurn": "60/50/40",
+        "cost": [
+          100,
+          100,
+          100
+        ],
+        "costBurn": "100",
+        "datavalues": {},
+        "effect": [
+          null,
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "effectBurn": [
+          null,
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "vars": [],
+        "costType": " {{ abilityresourcename }}",
+        "maxammo": "-1",
+        "range": [
+          3340,
+          3340,
+          3340
+        ],
+        "rangeBurn": "3340",
+        "image": {
+          "full": "LuxR.png",
+          "sprite": "spell7.png",
+          "group": "spell",
+          "x": 336,
+          "y": 96,
+          "w": 48,
+          "h": 48
+        },
+        "resource": "{{ cost }} {{ abilityresourcename }}"
+      }
+    ],
+    "passive": {
+      "name": "Illumination",
+      "description": "Lux's damaging spells charge the target with energy for a few seconds. Lux's next attack ignites the energy, dealing bonus magic damage (depending on Lux's level) to the target.",
+      "image": {
+        "full": "LuxIlluminatingFraulein.png",
+        "sprite": "passive2.png",
+        "group": "passive",
+        "x": 96,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      }
+    },
+    "recommended": []
+  },
+  "MissFortune": {
+    "id": "MissFortune",
+    "key": "21",
+    "name": "Miss Fortune",
+    "title": "the Bounty Hunter",
+    "image": {
+      "full": "MissFortune.png",
+      "sprite": "champion2.png",
+      "group": "champion",
+      "x": 336,
+      "y": 48,
+      "w": 48,
+      "h": 48
+    },
+    "lore": "A Bilgewater captain famed for her looks but feared for her ruthlessness, Sarah Fortune paints a stark figure among the hardened criminals of the port city. As a child, she witnessed the reaver king Gangplank murder her family—an act she brutally avenged years later, blowing up his flagship while he was still aboard. Those who underestimate her will face a beguiling and unpredictable opponent… and, likely, a bullet or two in their guts.",
+    "blurb": "A Bilgewater captain famed for her looks but feared for her ruthlessness, Sarah Fortune paints a stark figure among the hardened criminals of the port city. As a child, she witnessed the reaver king Gangplank murder her family—an act she brutally...",
+    "allytips": [
+      "Miss Fortune ramps up speed if she hasn't recently taken damage. Avoid getting hit to move very fast.",
+      "Use Double Up on the furthest enemy minion if enemy champions are hiding in back; it will bounce to them for lots of damage.",
+      "Make sure to utilize Love Tap while Strut is on cooldown to maximize the active's availability."
+    ],
+    "enemytips": [
+      "Miss Fortune's speed boost is removed if she is damaged by an enemy.",
+      "Miss Fortune is easy to kill if you can reach her; target her first in team fights."
+    ],
+    "tags": [
+      "Marksman"
+    ],
+    "partype": "Mana",
+    "info": {
+      "attack": 8,
+      "defense": 2,
+      "magic": 5,
+      "difficulty": 1
+    },
+    "stats": {
+      "hp": 640,
+      "hpperlevel": 103,
+      "mp": 300,
+      "mpperlevel": 40,
+      "movespeed": 325,
+      "armor": 28,
+      "armorperlevel": 4.2,
+      "spellblock": 30,
+      "spellblockperlevel": 1.3,
+      "attackrange": 550,
+      "hpregen": 3.75,
+      "hpregenperlevel": 0.65,
+      "mpregen": 8,
+      "mpregenperlevel": 0.8,
+      "crit": 0,
+      "critperlevel": 0,
+      "attackdamage": 52,
+      "attackdamageperlevel": 2.4,
+      "attackspeedperlevel": 3,
+      "attackspeed": 0.656
+    },
+    "spells": [
+      {
+        "id": "MissFortuneRicochetShot",
+        "name": "Double Up",
+        "description": "Miss Fortune fires a bullet at an enemy, damaging them and a target behind them. Both strikes can also apply Love Tap.",
+        "tooltip": "Miss Fortune fires a bouncing shot, dealing <physicalDamage>{{ totaldamagetooltip }} physical damage</physicalDamage> to an enemy and to another one behind them. <br /><br />The second shot can critically strike. It always critically strikes if the first shot kills its target. {{ spellmodifierdescriptionappend }}",
+        "leveltip": {
+          "label": [
+            "@AbilityResourceName@ Cost",
+            "Cooldown",
+            "Damage"
+          ],
+          "effect": [
+            "{{ cost }} -> {{ costNL }}",
+            "{{ cooldown }} -> {{ cooldownNL }}",
+            "{{ e2 }} -> {{ e2NL }}"
+          ]
+        },
+        "maxrank": 5,
+        "cooldown": [
+          7,
+          6,
+          5,
+          4,
+          3
+        ],
+        "cooldownBurn": "7/6/5/4/3",
+        "cost": [
+          43,
+          46,
+          49,
+          52,
+          55
+        ],
+        "costBurn": "43/46/49/52/55",
+        "datavalues": {},
+        "effect": [
+          null,
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            20,
+            45,
+            70,
+            95,
+            120
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            40,
+            40,
+            40,
+            40,
+            40
+          ],
+          [
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          [
+            40,
+            40,
+            40,
+            40,
+            40
+          ],
+          [
+            110,
+            110,
+            110,
+            110,
+            110
+          ],
+          [
+            160,
+            160,
+            160,
+            160,
+            160
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "effectBurn": [
+          null,
+          "0",
+          "20/45/70/95/120",
+          "0",
+          "0",
+          "40",
+          "20",
+          "40",
+          "110",
+          "160",
+          "0"
+        ],
+        "vars": [],
+        "costType": " {{ abilityresourcename }}",
+        "maxammo": "-1",
+        "range": [
+          650,
+          650,
+          650,
+          650,
+          650
+        ],
+        "rangeBurn": "650",
+        "image": {
+          "full": "MissFortuneRicochetShot.png",
+          "sprite": "spell8.png",
+          "group": "spell",
+          "x": 192,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "resource": "{{ cost }} {{ abilityresourcename }}"
+      },
+      {
+        "id": "MissFortuneViciousStrikes",
+        "name": "Strut",
+        "description": "Miss Fortune passively gains Move Speed when not attacked. This ability can be activated to grant bonus Attack Speed for a short duration. While it's on cooldown, Love Taps reduce the remaining cooldown of Strut.",
+        "tooltip": "<passive>Passive:</passive> After {{ passivebasemsooc }} seconds of not taking damage, Miss Fortune gains <speed>{{ passivebasems }} Move Speed</speed>. After another {{ passivemaxmsextraooc }} seconds, this increases to <speed>{{ passivemaxms }}</speed>.<br /><br /><active>Active:</active> Gain the passive effect's full <speed>Move Speed</speed> bonus and <attackSpeed>{{ activeas*100 }}% Attack Speed</attackSpeed> for {{ activeduration }} seconds.<br /><br /><spellName>Love Taps</spellName> reduce the Cooldown of this Ability by {{ lovetaprefund }} seconds.{{ spellmodifierdescriptionappend }}",
+        "leveltip": {
+          "label": [
+            "Move Speed",
+            "Attack Speed"
+          ],
+          "effect": [
+            "{{ passivemaxms }} -> {{ passivemaxmsNL }}",
+            "{{ activeas*100.000000 }}% -> {{ activeasnl*100.000000 }}%"
+          ]
+        },
+        "maxrank": 5,
+        "cooldown": [
+          12,
+          12,
+          12,
+          12,
+          12
+        ],
+        "cooldownBurn": "12",
+        "cost": [
+          45,
+          45,
+          45,
+          45,
+          45
+        ],
+        "costBurn": "45",
+        "datavalues": {},
+        "effect": [
+          null,
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "effectBurn": [
+          null,
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "vars": [],
+        "costType": " {{ abilityresourcename }}",
+        "maxammo": "-1",
+        "range": [
+          600,
+          600,
+          600,
+          600,
+          600
+        ],
+        "rangeBurn": "600",
+        "image": {
+          "full": "MissFortuneViciousStrikes.png",
+          "sprite": "spell8.png",
+          "group": "spell",
+          "x": 240,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "resource": "{{ cost }} {{ abilityresourcename }}"
+      },
+      {
+        "id": "MissFortuneScattershot",
+        "name": "Make It Rain",
+        "description": "Miss Fortune reveals an area with a flurry of bullets, dealing waves of damage to opponents and slowing them.",
+        "tooltip": "Miss Fortune rains bullets, revealing an area, <status>Slowing</status> by {{ totalslowamount }} and dealing <magicDamage>{{ totaldamagepersecond }} magic damage</magicDamage> per second for {{ baseduration }} seconds (total <magicDamage>{{ totaldamage }} magic damage</magicDamage>).{{ spellmodifierdescriptionappend }}",
+        "leveltip": {
+          "label": [
+            "Damage Per Second",
+            "Cooldown"
+          ],
+          "effect": [
+            "{{ basedamagepersecond }} -> {{ basedamagepersecondNL }}",
+            "{{ cooldown }} -> {{ cooldownNL }}"
+          ]
+        },
+        "maxrank": 5,
+        "cooldown": [
+          18,
+          17,
+          16,
+          15,
+          14
+        ],
+        "cooldownBurn": "18/17/16/15/14",
+        "cost": [
+          80,
+          80,
+          80,
+          80,
+          80
+        ],
+        "costBurn": "80",
+        "datavalues": {},
+        "effect": [
+          null,
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "effectBurn": [
+          null,
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "vars": [],
+        "costType": " {{ abilityresourcename }}",
+        "maxammo": "-1",
+        "range": [
+          1000,
+          1000,
+          1000,
+          1000,
+          1000
+        ],
+        "rangeBurn": "1000",
+        "image": {
+          "full": "MissFortuneScattershot.png",
+          "sprite": "spell8.png",
+          "group": "spell",
+          "x": 288,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "resource": "{{ cost }} {{ abilityresourcename }}"
+      },
+      {
+        "id": "MissFortuneBulletTime",
+        "name": "Bullet Time",
+        "description": "Miss Fortune channels a barrage of bullets into a cone in front of her, dealing large amounts of damage to enemies. Each wave of Bullet Time can critically strike",
+        "tooltip": "Miss Fortune channels a barrage of bullets, firing {{ totalwaves }} waves over {{ totalchannelduration }} seconds, dealing <physicalDamage>{{ physicaldamageperwave }} physical damage</physicalDamage> per wave (total <physicalDamage>{{ totalphysicaldamage }} physical damage</physicalDamage>).<br /><br />Each wave can critically strike for %i:scaleCrit% <physicalDamage>{{ physicalcritperwave }} physical damage</physicalDamage> (total %i:scaleCrit% <physicalDamage>{{ totalphysicalcritdamage }} physical damage</physicalDamage>).{{ spellmodifierdescriptionappend }}",
+        "leveltip": {
+          "label": [
+            "Bullet Barrages",
+            "Cooldown"
+          ],
+          "effect": [
+            "{{ basewaves }} -> {{ basewavesNL }}",
+            "{{ cooldown }} -> {{ cooldownNL }}"
+          ]
+        },
+        "maxrank": 3,
+        "cooldown": [
+          120,
+          110,
+          100
+        ],
+        "cooldownBurn": "120/110/100",
+        "cost": [
+          100,
+          100,
+          100
+        ],
+        "costBurn": "100",
+        "datavalues": {},
+        "effect": [
+          null,
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "effectBurn": [
+          null,
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "vars": [],
+        "costType": " {{ abilityresourcename }}",
+        "maxammo": "-1",
+        "range": [
+          25000,
+          25000,
+          25000
+        ],
+        "rangeBurn": "25000",
+        "image": {
+          "full": "MissFortuneBulletTime.png",
+          "sprite": "spell8.png",
+          "group": "spell",
+          "x": 336,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "resource": "{{ cost }} {{ abilityresourcename }}"
+      }
+    ],
+    "passive": {
+      "name": "Love Tap",
+      "description": "Miss Fortune deals bonus physical damage whenever she basic attacks a new target.",
+      "image": {
+        "full": "MissFortune_W.png",
+        "sprite": "passive2.png",
+        "group": "passive",
+        "x": 336,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      }
+    },
+    "recommended": []
+  },
+  "Warwick": {
+    "id": "Warwick",
+    "key": "19",
+    "name": "Warwick",
+    "title": "the Uncaged Wrath of Zaun",
+    "image": {
+      "full": "Warwick.png",
+      "sprite": "champion4.png",
+      "group": "champion",
+      "x": 336,
+      "y": 96,
+      "w": 48,
+      "h": 48
+    },
+    "lore": "Warwick is a monster who hunts the gray alleys of Zaun. Transformed by agonizing experiments, his body is fused with an intricate system of chambers and pumps, machinery filling his veins with alchemical rage. Bursting out of the shadows, he preys upon those criminals who terrorize the city's depths. Warwick is drawn to blood, and driven mad by its scent. None who spill it can escape him.",
+    "blurb": "Warwick is a monster who hunts the gray alleys of Zaun. Transformed by agonizing experiments, his body is fused with an intricate system of chambers and pumps, machinery filling his veins with alchemical rage. Bursting out of the shadows, he preys upon...",
+    "allytips": [
+      "Follow your Blood Hunt trails to low health enemy champions.",
+      "Infinite Duress (R)'s distance scales with any Move Speed you gain, even from ally buffs and summoner spells.",
+      "Jaws of the Beast (Q) will follow enemies who run, dash or teleport if you keep the button held down."
+    ],
+    "enemytips": [
+      "Warwick's attacks heal him at low health. Save your disables to finish him off.",
+      "Warwick is empowered versus low health enemies. Manage your health to keep him at bay.",
+      "Warwick's ultimate cast range scales with his Move Speed."
+    ],
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
+    "partype": "Mana",
+    "info": {
+      "attack": 9,
+      "defense": 5,
+      "magic": 3,
+      "difficulty": 3
+    },
+    "stats": {
+      "hp": 620,
+      "hpperlevel": 99,
+      "mp": 280,
+      "mpperlevel": 35,
+      "movespeed": 335,
+      "armor": 33,
+      "armorperlevel": 4.4,
+      "spellblock": 32,
+      "spellblockperlevel": 2.05,
+      "attackrange": 125,
+      "hpregen": 4,
+      "hpregenperlevel": 0.75,
+      "mpregen": 7.45,
+      "mpregenperlevel": 0.6,
+      "crit": 0,
+      "critperlevel": 0,
+      "attackdamage": 65,
+      "attackdamageperlevel": 3,
+      "attackspeedperlevel": 2.3,
+      "attackspeed": 0.638
+    },
+    "spells": [
+      {
+        "id": "WarwickQ",
+        "name": "Jaws of the Beast",
+        "description": "Warwick lunges forward and bites his target, dealing damage based on their maximum health and healing for damage dealt.",
+        "tooltip": "<tap>Tap:</tap> Warwick lunges forward and bites, dealing <magicDamage>{{ basebitedamage }} plus {{ e1 }}% max Health magic damage</magicDamage> and <healing>healing for {{ e3 }}% of the damage dealt</healing>.<br /><br /><hold>Hold:</hold> Warwick lunges and clamps his jaws on the target, leaping behind them. While clamped, Warwick follows all movement of the target. After releasing his hold, he does the same damage and healing.{{ spellmodifierdescriptionappend }}",
+        "leveltip": {
+          "label": [
+            "Healing",
+            "% Health as Damage",
+            "@AbilityResourceName@ Cost"
+          ],
+          "effect": [
+            "{{ e3 }}% -> {{ e3NL }}%",
+            "{{ e1 }}% -> {{ e1NL }}%",
+            "{{ cost }} -> {{ costNL }}"
+          ]
+        },
+        "maxrank": 5,
+        "cooldown": [
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "cooldownBurn": "6",
+        "cost": [
+          50,
+          60,
+          70,
+          80,
+          90
+        ],
+        "costBurn": "50/60/70/80/90",
+        "datavalues": {},
+        "effect": [
+          null,
+          [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          [
+            100,
+            150,
+            200,
+            250,
+            300
+          ],
+          [
+            25,
+            37.5,
+            50,
+            62.5,
+            75
+          ],
+          [
+            100,
+            125,
+            150,
+            175,
+            200
+          ],
+          [
+            450,
+            450,
+            450,
+            450,
+            450
+          ],
+          [
+            200,
+            200,
+            200,
+            200,
+            200
+          ],
+          [
+            300,
+            300,
+            300,
+            300,
+            300
+          ],
+          [
+            425,
+            425,
+            425,
+            425,
+            425
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "effectBurn": [
+          null,
+          "6/7/8/9/10",
+          "100/150/200/250/300",
+          "25/37.5/50/62.5/75",
+          "100/125/150/175/200",
+          "450",
+          "200",
+          "300",
+          "425",
+          "0",
+          "0"
+        ],
+        "vars": [],
+        "costType": " {{ abilityresourcename }}",
+        "maxammo": "-1",
+        "range": [
+          350,
+          350,
+          350,
+          350,
+          350
+        ],
+        "rangeBurn": "350",
+        "image": {
+          "full": "WarwickQ.png",
+          "sprite": "spell15.png",
+          "group": "spell",
+          "x": 192,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "resource": "{{ cost }} {{ abilityresourcename }}"
+      },
+      {
+        "id": "WarwickW",
+        "name": "Blood Hunt",
+        "description": "Warwick senses enemies below 50% health, gaining Move Speed toward and attack speed against them. When they fall below 20% health, he frenzies and these bonuses triple.",
+        "tooltip": "<spellPassive>Passive:</spellPassive> Warwick can sense champions below 50% Health, gaining <speed>{{ e1 }}% Move Speed</speed> towards them and gaining <attackSpeed>{{ e2 }}% Attack Speed</attackSpeed> against them. These bonuses are increased by 250% against enemies below 20% Health.<br /><br /><spellActive>Active:</spellActive> Warwick can briefly sense all enemies, and gains this Ability's passive effect against the closest champion for 8 seconds, regardless of Health. Warwick cannot use this Ability while in combat with champions.{{ spellmodifierdescriptionappend }}",
+        "leveltip": {
+          "label": [
+            "Move Speed",
+            "Attack Speed",
+            "Cooldown"
+          ],
+          "effect": [
+            "{{ e1 }}% -> {{ e1NL }}%",
+            "{{ e2 }}% -> {{ e2NL }}%",
+            "{{ cooldown }} -> {{ cooldownNL }}"
+          ]
+        },
+        "maxrank": 5,
+        "cooldown": [
+          120,
+          105,
+          90,
+          75,
+          60
+        ],
+        "cooldownBurn": "120/105/90/75/60",
+        "cost": [
+          70,
+          70,
+          70,
+          70,
+          70
+        ],
+        "costBurn": "70",
+        "datavalues": {},
+        "effect": [
+          null,
+          [
+            35,
+            40,
+            45,
+            50,
+            55
+          ],
+          [
+            70,
+            80,
+            90,
+            100,
+            110
+          ],
+          [
+            10,
+            15,
+            20,
+            25,
+            30
+          ],
+          [
+            80,
+            90,
+            100,
+            110,
+            120
+          ],
+          [
+            30,
+            30,
+            30,
+            30,
+            30
+          ],
+          [
+            8,
+            8,
+            8,
+            8,
+            8
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "effectBurn": [
+          null,
+          "35/40/45/50/55",
+          "70/80/90/100/110",
+          "10/15/20/25/30",
+          "80/90/100/110/120",
+          "30",
+          "8",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "vars": [],
+        "costType": " {{ abilityresourcename }}",
+        "maxammo": "2",
+        "range": [
+          4000,
+          4000,
+          4000,
+          4000,
+          4000
+        ],
+        "rangeBurn": "4000",
+        "image": {
+          "full": "WarwickW.png",
+          "sprite": "spell15.png",
+          "group": "spell",
+          "x": 240,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "resource": "{{ cost }} {{ abilityresourcename }}"
+      },
+      {
+        "id": "WarwickE",
+        "name": "Primal Howl",
+        "description": "Warwick gains damage reduction for 2.5 seconds. At the end, or if re-activated, he howls, causing nearby enemies to flee for 1 second.",
+        "tooltip": "Warwick gains {{ e1 }}% damage reduction for 2.5 seconds. After it ends, Warwick howls, <status>Fearing</status> nearby enemies for {{ e3 }} second. Warwick can <recast>Recast</recast> to end the Ability early.{{ spellmodifierdescriptionappend }}",
+        "leveltip": {
+          "label": [
+            "Damage Reduction",
+            "Cooldown"
+          ],
+          "effect": [
+            "{{ e1 }}% -> {{ e1NL }}%",
+            "{{ cooldown }} -> {{ cooldownNL }}"
+          ]
+        },
+        "maxrank": 5,
+        "cooldown": [
+          15,
+          14,
+          13,
+          12,
+          11
+        ],
+        "cooldownBurn": "15/14/13/12/11",
+        "cost": [
+          40,
+          40,
+          40,
+          40,
+          40
+        ],
+        "costBurn": "40",
+        "datavalues": {},
+        "effect": [
+          null,
+          [
+            35,
+            40,
+            45,
+            50,
+            55
+          ],
+          [
+            2.75,
+            2.75,
+            2.75,
+            2.75,
+            2.75
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            800,
+            800,
+            800,
+            800,
+            800
+          ],
+          [
+            400,
+            400,
+            400,
+            400,
+            400
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "effectBurn": [
+          null,
+          "35/40/45/50/55",
+          "2.75",
+          "1",
+          "1",
+          "800",
+          "400",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "vars": [],
+        "costType": " {{ abilityresourcename }}",
+        "maxammo": "-1",
+        "range": [
+          375,
+          375,
+          375,
+          375,
+          375
+        ],
+        "rangeBurn": "375",
+        "image": {
+          "full": "WarwickE.png",
+          "sprite": "spell15.png",
+          "group": "spell",
+          "x": 288,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "resource": "{{ cost }} {{ abilityresourcename }}"
+      },
+      {
+        "id": "WarwickR",
+        "name": "Infinite Duress",
+        "description": "Warwick leaps in a direction (scaling with his bonus Move Speed), suppressing the first champion he collides with for 1.5 seconds.",
+        "tooltip": "Warwick leaps a huge distance that scales with his <speed>Move Speed</speed>, <status>Suppressing</status> the first champion he collides with while he channels for {{ rduration }} seconds. He attacks that champion 3 times over the duration, dealing <magicDamage>{{ damagecumulative }} magic damage</magicDamage>. Warwick <healing>heals for 100% of all damage dealt</healing> during the channel.{{ spellmodifierdescriptionappend }}",
+        "leveltip": {
+          "label": [
+            "Damage",
+            "Cooldown"
+          ],
+          "effect": [
+            "{{ rbasedamage }} -> {{ rbasedamageNL }}",
+            "{{ cooldown }} -> {{ cooldownNL }}"
+          ]
+        },
+        "maxrank": 3,
+        "cooldown": [
+          110,
+          90,
+          70
+        ],
+        "cooldownBurn": "110/90/70",
+        "cost": [
+          100,
+          100,
+          100
+        ],
+        "costBurn": "100",
+        "datavalues": {},
+        "effect": [
+          null,
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "effectBurn": [
+          null,
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "vars": [],
+        "costType": " {{ abilityresourcename }}",
+        "maxammo": "-1",
+        "range": [
+          25000,
+          25000,
+          25000
+        ],
+        "rangeBurn": "25000",
+        "image": {
+          "full": "WarwickR.png",
+          "sprite": "spell15.png",
+          "group": "spell",
+          "x": 336,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "resource": "{{ cost }} {{ abilityresourcename }}"
+      }
+    ],
+    "passive": {
+      "name": "Eternal Hunger",
+      "description": "Warwick's basic attacks deal bonus magic damage. If Warwick is below 50% health, he heals the same amount. If Warwick is below 25% health, this healing triples.",
+      "image": {
+        "full": "WarwickP.png",
+        "sprite": "passive4.png",
+        "group": "passive",
+        "x": 336,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      }
+    },
+    "recommended": []
+  }
+},{},{}]
