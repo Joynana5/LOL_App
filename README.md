@@ -7,12 +7,12 @@ League Stitch keeps things simple!
 
 ## Authors
 
-- [@octokatherine](https://www.github.com/octokatherine)
+- [@Joynana5](https://www.github.com/Joynana5)
 
 
 ## Tech Stack
 
-**Client:** React, Redux, TailwindCSS
+**Client:** JavaScript, HTML, CSS
 
 **Server:** Node, Express
 
@@ -73,26 +73,20 @@ Start the server
 
 ## Features
 
-- Light/dark mode toggle
-- Live previews
-- Fullscreen mode
-- Cross platform
-
-
-## Support
-
-For support, email fake@fake.com or join our Slack channel.
+- Local User Authentification
+- Champion ....
+- 
+- 
 
 
 ## Feedback
 
-If you have any feedback, please reach out to us at fake@fake.com
+If you have any feedback, please reach out to us at **Create Brand...
 
 
-## License
+## 
 
-[MIT](https://choosealicense.com/licenses/mit/)
-
+linkedin 
 
 ![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
 
